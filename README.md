@@ -35,6 +35,7 @@ This project focuses on determining which type of advertisement (TV, Radio, or N
    - **Normality**: Shapiro-Wilk test checks if the residuals are normally distributed.
    - **Homoskedasticity**: Breusch-Pagan test checks if the variance of residuals is constant.
    - **Autocorrelation**: Durbin-Watson test checks for autocorrelation in the residuals.
+     
      Additionally, visual diagnostic checks include:
      - **Residual vs Fitted Plo**t: Checks if residuals are randomly scattered around zero.
      - **Q-Q Plot of Residuals**: Assesses if residuals follow a normal distribution.
@@ -50,9 +51,9 @@ This project focuses on determining which type of advertisement (TV, Radio, or N
    - Radio vs Newspaper: No significant difference (p-value > alpha), indicating Radio and Newspaper advertising costs are similar.
 
 3. **Model Adequacy**:
-  - **Normality Test (Shapiro-Wilk)**: The residuals do not follow a normal distribution (p-value < alpha).
-  - **Homoskedasticity Test (Breusch-Pagan)**: The residuals show non-constant variance (heteroskedasticity), indicating that the assumption of homoskedasticity is violated.
-  - **Autocorrelation Test (Durbin-Watson)**: No significant autocorrelation in the residuals (p-value > alpha).
+   - **Normality Test (Shapiro-Wilk)**: The residuals do not follow a normal distribution (p-value < alpha).
+   - **Homoskedasticity Test (Breusch-Pagan)**: The residuals show non-constant variance (heteroskedasticity), indicating that the assumption of homoskedasticity is violated.
+   - **Autocorrelation Test (Durbin-Watson)**: No significant autocorrelation in the residuals (p-value > alpha).
 
 4. **Model Suggestions**:
    Due to violations of the normality and homoskedasticity assumptions, it is recommended to consider alternative models such as robust regression or quantile regression for improved accuracy.
