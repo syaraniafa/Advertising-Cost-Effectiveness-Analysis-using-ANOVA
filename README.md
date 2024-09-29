@@ -13,7 +13,9 @@ This project focuses on determining which type of advertisement (TV, Radio, or N
 
 ## Project Objectives
 1. **Objective**: To determine if there is a statistically significant difference between the average advertising costs across TV, Radio, and Newspaper channels.
+   
 2. **Method**: Perform a one-way ANOVA to test if there are significant differences in advertising costs across the three categories.
+   
 3. **Outcome**: Based on the results of the ANOVA and post-hoc tests, the most cost-effective advertising medium will be identified. It will help the company decide which advertising medium provides the most cost-effective solution for their budget.
 
 ## Methodology
@@ -22,22 +24,22 @@ This project focuses on determining which type of advertisement (TV, Radio, or N
 
 2. **One-Way ANOVA Test**
    The one-way ANOVA test checks if there is a significant difference in the mean advertising costs across the three categories. The test follows these hypotheses:
-- **Null Hypothesis (H0)**: There is no difference in the mean advertising costs between the three types of advertisements.
-- **Alternative Hypothesis (H1)**: There is at least one significant difference in the mean advertising costs between the types of advertisements.
+  - **Null Hypothesis (H0)**: There is no difference in the mean advertising costs between the three types of advertisements.
+  - **Alternative Hypothesis (H1)**: There is at least one significant difference in the mean advertising costs between the types of advertisements.
   
 3. **Post-Hoc Analysis (Tukey HSD)**
    If the ANOVA results are significant (p-value < alpha), a Tukey HSD (Honest Significant Difference) test is performed to determine which specific pairs of advertisement types differ significantly.
 
 4. **Model Adequacy Checking**
 Several diagnostic tests are performed to verify that the assumptions of ANOVA are met:
-- **Normality**: Shapiro-Wilk test checks if the residuals are normally distributed.
-- **Homoskedasticity**: Breusch-Pagan test checks if the variance of residuals is constant.
-- **Autocorrelation**: Durbin-Watson test checks for autocorrelation in the residuals.
+  - **Normality**: Shapiro-Wilk test checks if the residuals are normally distributed.
+  - **Homoskedasticity**: Breusch-Pagan test checks if the variance of residuals is constant.
+  - **Autocorrelation**: Durbin-Watson test checks for autocorrelation in the residuals.
 - 
 Additionally, visual diagnostic checks include:
-- **Residual vs Fitted Plo**t: Checks if residuals are randomly scattered around zero.
-- **Q-Q Plot of Residuals**: Assesses if residuals follow a normal distribution.
-- **Residuals vs Factor Levels**: Examines variance consistency across the factor levels (advertisement types).
+  - **Residual vs Fitted Plo**t: Checks if residuals are randomly scattered around zero.
+  - **Q-Q Plot of Residuals**: Assesses if residuals follow a normal distribution.
+  - **Residuals vs Factor Levels**: Examines variance consistency across the factor levels (advertisement types).
 
 ## Results
 1. **ANOVA Test**:
@@ -49,18 +51,18 @@ Additionally, visual diagnostic checks include:
    - Radio vs Newspaper: No significant difference (p-value > alpha), indicating Radio and Newspaper advertising costs are similar.
 
 3. **Model Adequacy**:
-- **Normality Test (Shapiro-Wilk)**: The residuals do not follow a normal distribution (p-value < alpha).
-- **Homoskedasticity Test (Breusch-Pagan)**: The residuals show non-constant variance (heteroskedasticity), indicating that the assumption of homoskedasticity is violated.
-- **Autocorrelation Test (Durbin-Watson)**: No significant autocorrelation in the residuals (p-value > alpha).
+  - **Normality Test (Shapiro-Wilk)**: The residuals do not follow a normal distribution (p-value < alpha).
+  - **Homoskedasticity Test (Breusch-Pagan)**: The residuals show non-constant variance (heteroskedasticity), indicating that the assumption of homoskedasticity is violated.
+  - **Autocorrelation Test (Durbin-Watson)**: No significant autocorrelation in the residuals (p-value > alpha).
 
 4. Model Suggestions:
    Due to violations of the normality and homoskedasticity assumptions, it is recommended to consider alternative models such as robust regression or quantile regression for improved accuracy.
 
 ## Visualizations
 Three key visualizations were produced:
-1. Residual vs Fitted Plot: Demonstrates heteroskedasticity in the residuals.
-2. Q-Q Plot of Residuals: Shows that residuals deviate from normal distribution.
-3. Residuals vs Factor Levels: Confirms non-constant variance across advertisement types.
+1. **Residual vs Fitted Plot**: Demonstrates heteroskedasticity in the residuals.
+2. **Q-Q Plot of Residuals**: Shows that residuals deviate from normal distribution.
+3. **Residuals vs Factor Levels**: Confirms non-constant variance across advertisement types.
 
 ## Conclusion
 - **Most Cost-Effective Medium**: Based on the analysis, TV advertising is significantly different from both Radio and Newspaper in terms of cost. Radio and Newspaper costs are not significantly different.
